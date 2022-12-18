@@ -15,6 +15,10 @@ jobs:
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
       - name: Install Dependencies
         run: composer update --ignore-platform-reqs
+      - name: passport require
+        run: composer require laravel/passport
+      - name: migrate
+        run: php artisan migrate
       - name: install passport
         run: php artisan passport:install
       
