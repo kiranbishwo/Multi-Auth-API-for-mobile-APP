@@ -17,8 +17,6 @@ jobs:
         run: composer update --ignore-platform-reqs
       - name: passport require
         run: composer require laravel/passport
-      - name: migrate
-        run: php artisan migrate
       - name: install passport
         run: php artisan passport:install
       
